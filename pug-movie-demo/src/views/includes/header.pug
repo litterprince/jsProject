@@ -1,0 +1,43 @@
+.row(style="margin-top:20px")
+	blockquote.blockquote
+		p.h2 #{title}
+		footer.blockquote-footer 重度科幻迷
+.navbar.navbar-dark.bg-primary.fixed-top(style="background-color: #e3f2fd;")
+	.container
+		.navbar-text.justify-content-start
+			a.navbar-link(href="/") 首页
+			if user
+				span &nbsp; | &nbsp;
+				a.navbar-link(href="/movie/index") 电影
+				span &nbsp; | &nbsp;
+				a.navbar-link(href="/category/index") 标签
+		.navbar-text.justify-content-end
+			#user
+				if user
+					span 欢迎您，#{user.userName}
+					span &nbsp;&nbsp;&nbsp;&nbsp;
+					a.navbar-link(href="/user/logout") 退出
+				else
+					a.navbar-link(href="/user/logupPage") 注册
+					span &nbsp; | &nbsp;
+					a.navbar-link(href="#", data-toggle="modal", data-target="#loginModal") 登陆
+.modal.fade#loginModal(tabindex='-1', role='dialog', aria-labelledby='loginModalLabel', aria-hidden='true')
+	.modal-dialog(role='document')
+		.modal-content
+			form#loginForm(method='post', action='/user/login')
+				.modal-header
+					h5.modal-title#loginModalLabel 用户登陆
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span(aria-hidden='true') ×
+				.modal-body
+					.form-group.row
+						label.col-sm-2.col-form-label(for="loginUserName") 用户名
+						.col-sm-10
+							input#loginUserName.form-control(name='user[userName]', type="text", placeholder="userName")
+					.form-group.row
+						label.col-sm-2.col-form-label(form="loginPassword") 密码
+						.col-sm-10
+							input#loginPassword.form-control(name='user[password]', type="password", placeholder="password")
+				.modal-footer
+					button.btn.btn-secondary(type='button', data-dismiss='modal') 取消
+					button.btn.btn-primary(type='submit') 确定

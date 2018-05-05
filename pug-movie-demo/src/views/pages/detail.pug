@@ -1,0 +1,20 @@
+extends ../layout
+
+block content
+	.row
+		.col-md-7
+			video(src=movie.flash, controls="controls", width="100%", height="100%") 您的浏览器不支持 video 标签
+		.col-md-5
+			dl.row
+				dt.col-sm-3 电影名字
+				dd.col-sm-9= movie.title
+				dt.col-sm-3  导演
+				dd.col-sm-9= movie.director
+				dt.col-sm-3  国家
+				dd.col-sm-9= movie.country
+				dt.col-sm-3  语言
+				dd.col-sm-9= movie.language
+				dt.col-sm-3  上映年份
+				dd.col-sm-9= movie.year
+				dt.col-sm-3  电影简介
+				dd.col-sm-9= movie.summary

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        @keyframes fade-in {
+            from {transform:scale(0.7);opacity: 0}
+            to {transform:scale(1);opacity: 1 }
+        }
+        @keyframes fade-out {
+            from { transform:scale(0.7);opacity: 1 }
+            to { transform:scale(0);opacity: 0  }
+        }
+        .toast-container{
+            position: absolute;
+            top:0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            z-index: 2000;
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .toast-content{
+            padding:0 5px 0 5px;
+            min-width: 180px;
+            width: auto;
+            height: 60px;
+            line-height: 60px;
+            background-color: #0000009c;
+            color:white;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .fade-in{
+            animation-name: fade-in;
+            animation-duration: 0.3s;
+        }
+        .fade-out{
+            animation-name: fade-out;
+            animation-duration: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <input id="btn" type="button" value="测试"/>
+    <section id="container" class="toast-container" style="display: none">
+        <div id="toast" class="toast-content">
+            <span>hi</span>
+        </div>
+    </section>
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+            var container = document.getElementById("container");
+            container.style.display = 'flex';
+            var toast = document.getElementById("toast");
+            toast.setAttribute('class', 'toast-content fade-in');
+            setTimeout(function () {
+                toast.setAttribute('class', 'toast-content fade-out');
+                setTimeout(function () {
+                    container.style.display = 'none';
+                }, 300);
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+extends ../../layout
+
+block content
+	.row.justify-content-end
+		a.btn.btn-outline-info.btn-sm.add(href='/movie/new') 新增
+	br
+	table.table.table-hover.table-bordered.table-sm
+		thead
+			tr
+				th 电影名字
+				th 导演
+				th 国家
+				th 上映年份
+				th 录入时间
+				th 查看
+				th 更新
+				th 删除
+		tbody
+			each item in movies
+				tr(class="item-id-"+item._id)
+					td #{item.title}
+					td #{item.director}
+					td #{item.country}
+					td #{item.year}
+					td #{moment(item.meta.createAt).format('MM/DD/YYYY')}
+					td: a(target="_blank", href="/movie/show/"+item._id) 查看
+					td: a(href="/movie/modify/"+item._id) 修改
+					td: a.del(href="#", data-id=item._id, data-toggle="modal", data-target="#delModal") 删除
+	.modal#delModal(tabindex='-1', role='dialog', aria-labelledby='delModal', aria-hidden='true')
+		.modal-dialog(role='document')
+			.modal-content
+				.modal-header
+					h5.modal-title#exampleModalLabel 提示
+					button.close(type='button', data-dismiss='modal', aria-label='Close')
+						span(aria-hidden='true') ×
+				.modal-body 确定删除？
+				.modal-footer
+					button.btn.btn-secondary(type='button', data-dismiss='modal') 取消
+					button#delSubmit.btn.btn-danger(type='button') 删除
+	script(src="/js/movie/index.js")

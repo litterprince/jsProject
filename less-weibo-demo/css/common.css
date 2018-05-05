@@ -1,0 +1,454 @@
+@charset "utf-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+ul,
+ol {
+  list-style: none;
+}
+img {
+  border: none;
+}
+input,
+select,
+textarea {
+  outline: none;
+  border: none;
+  background: none;
+}
+textarea {
+  resize: none;
+}
+a {
+  text-decoration: none;
+}
+body {
+  background-color: #abd3ec;
+}
+.header {
+  background-color: #fff;
+  border-top: 2px solid #fa7a37;
+  height: 48px;
+  width: 100%;
+}
+.header_content {
+  width: 1240px;
+  margin-left: auto;
+  margin-right: auto;
+  *zoom: 1;
+}
+.header_content:before,
+.header_content:after {
+  display: table;
+  content: "";
+}
+.header_content:after {
+  clear: both;
+}
+.header .logo {
+  float: left;
+  margin: 8px 30px 12px 0;
+  height: 28px;
+  width: 81px;
+  background: url('../image/logo.jpg');
+}
+.header .logo a {
+  display: block;
+  height: 100%;
+  text-indent: 99em;
+}
+.header .search {
+  float: left;
+  background-color: #f2f2f4;
+  width: 470px;
+  height: 30px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+}
+.header .search:focus {
+  border: 1px solid #eb7350;
+}
+.header .search_input {
+  float: left;
+  width: 414px;
+  height: 30px;
+  padding: 0 8px;
+  line-height: 30px;
+  font-size: 12px;
+}
+.header .search_btn {
+  float: right;
+  width: 20px;
+  height: 18px;
+  margin-top: 6px;
+  margin-right: 10px;
+  background: url('../image/search.jpg') left top no-repeat;
+}
+.header .header_nav {
+  float: left;
+  margin-top: 14px;
+  margin-left: 70px;
+}
+.header .header_nav li {
+  float: left;
+  background: url('../image/btn_game.jpg') left center no-repeat;
+  padding-right: 26px;
+}
+.header .header_nav a {
+  font-family: "Microsoft Yahei", "微软雅黑";
+  font-size: 14px;
+  color: #6c6e6f;
+  padding-left: 26px;
+}
+.header .header_nav a:hover {
+  color: #fa7a37;
+}
+.main {
+  *zoom: 1;
+  width: 1020px;
+  margin: 0 auto;
+  padding: 15px 0;
+  background-color: #75b0d2;
+}
+.main:before,
+.main:after {
+  display: table;
+  content: "";
+}
+.main:after {
+  clear: both;
+}
+.main .left_area {
+  float: left;
+  width: 750px;
+}
+.main .left_area_content {
+  float: left;
+  width: 600px;
+  *zoom: 1;
+}
+.main .left_area_content:before,
+.main .left_area_content:after {
+  display: table;
+  content: "";
+}
+.main .left_area_content:after {
+  clear: both;
+}
+.main .left_area_nav {
+  float: left;
+}
+.main .left_area_nav li {
+  width: 150px;
+  line-height: 34px;
+}
+.main .left_area_nav li:hover {
+  background-color: #91bfde;
+}
+.main .left_area_nav a {
+  display: block;
+  font-family: "Microsoft Yahei", "微软雅黑";
+  font-size: 14px;
+  color: #eaffff;
+  padding-left: 14px;
+}
+.main .left_area_nav .strong_text {
+  font-weight: bold;
+}
+.main .left_area_nav .nav_line {
+  height: 1px;
+  margin: 10px 0;
+  background-color: #91bfde;
+}
+.main .release_box {
+  height: 165px;
+  background-color: #fffefa;
+}
+.main .release_box_content {
+  width: 577px;
+  margin: 0 auto;
+  padding: 15px 0 7px 0;
+  *zoom: 1;
+}
+.main .release_box_content:before,
+.main .release_box_content:after {
+  display: table;
+  content: "";
+}
+.main .release_box_content:after {
+  clear: both;
+}
+.main .release_box .top {
+  height: 18px;
+  margin-bottom: 8px;
+}
+.main .release_box .top .top_img {
+  float: left;
+}
+.main .release_box .top .top_img a {
+  display: block;
+  background: url("../image/whatsnew.jpg") left center no-repeat;
+  width: 180px;
+  height: 18px;
+}
+.main .release_box .top .top_link {
+  float: right;
+}
+.main .release_box .top .top_link a {
+  display: block;
+  line-height: 18px;
+  color: #eb7350;
+  font-size: 14px;
+}
+.main .release_box .center {
+  height: 78px;
+  margin-bottom: 5px;
+}
+.main .release_box .center textarea {
+  border: 1px solid #c8c8c8;
+  padding: 4px;
+  width: 565px;
+  height: 66px;
+}
+.main .release_box .center textarea:focus {
+  border: 1px solid #eb7350;
+}
+.main .release_box .bottom {
+  height: 30px;
+  *zoom: 1;
+}
+.main .release_box .bottom:before,
+.main .release_box .bottom:after {
+  display: table;
+  content: "";
+}
+.main .release_box .bottom:after {
+  clear: both;
+}
+.main .release_box .bottom_left {
+  float: left;
+}
+.main .release_box .bottom_left li {
+  float: left;
+  margin-right: 17px;
+  background: url('../image/bottom_btn1.jpg') left center no-repeat;
+}
+.main .release_box .bottom_left li a {
+  line-height: 30px;
+  padding-left: 24px;
+  font-size: 12px;
+}
+.main .release_box .bottom_left li a:hover {
+  color: #eb7350;
+}
+.main .release_box .bottom_right {
+  float: right;
+}
+.main .release_box .bottom_right a {
+  font-size: 12px;
+}
+.main .release_box .bottom_right .state {
+  float: left;
+  line-height: 30px;
+  margin-right: 26px;
+}
+.main .release_box .bottom_right .submit {
+  float: left;
+}
+.main .release_box .bottom_right .submit input {
+  width: 82px;
+  height: 30px;
+  background-color: #ff8140;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.main .release_box .bottom_right .submit input:hover {
+  background-color: #f7671d;
+}
+.main .message_nav {
+  width: 600px;
+  height: 39px;
+  background-color: #fffefa;
+  margin-top: 9px;
+}
+.main .message_nav .left {
+  float: left;
+  height: 39px;
+  margin-left: 10px;
+}
+.main .message_nav .left li {
+  display: block;
+  height: 39px;
+  float: left;
+  padding-right: 29px;
+}
+.main .message_nav .left a {
+  display: block;
+  height: 39px;
+  line-height: 39px;
+  font-size: 12px;
+}
+.main .message_nav .left a:hover {
+  color: #fa7a37;
+}
+.main .message_nav .right {
+  float: right;
+  width: 178px;
+  height: 26px;
+  margin-top: 5.5px;
+  margin-right: 10px;
+  border: 1px solid #c1cad1;
+  line-height: 26px;
+}
+.main .message_nav .right input {
+  vertical-align: top;
+  height: 26px;
+}
+.main .message_nav .right .right_search {
+  width: 127px;
+  padding: 0 8px;
+}
+.main .message_nav .right .right_btn {
+  width: 21px;
+  background: url('../image/right_btn.jpg') left center no-repeat;
+}
+.main .message_list {
+  width: 600px;
+  margin-top: 9px;
+}
+.main .message_list .message_item {
+  width: 600px;
+  background-color: #fffefa;
+  margin-bottom: 9px;
+}
+.main .message_list .message_main {
+  width: 551px;
+  padding: 23px 25px 0 25px;
+}
+.main .message_list .message_content {
+  width: 551px;
+  margin-bottom: 20px;
+  line-height: 22px;
+  *zoom: 1;
+}
+.main .message_list .message_content:before,
+.main .message_list .message_content:after {
+  display: table;
+  content: "";
+}
+.main .message_list .message_content:after {
+  clear: both;
+}
+.main .message_list .message_content .left_photo {
+  float: left;
+}
+.main .message_list .message_content .left_photo img {
+  width: 50px;
+  height: 50px;
+}
+.main .message_list .message_content .right_text {
+  float: left;
+  width: 501px;
+  font-size: 11px;
+}
+.main .message_list .message_content .ms_user a {
+  color: #000;
+  font-weight: bold;
+  font-size: 14px;
+}
+.main .message_list .message_content .ms_user a:hover {
+  color: #fa7a37;
+}
+.main .message_list .message_content .ms_from a {
+  color: #6c6e6f;
+  font-size: 11px;
+}
+.main .message_list .message_content .ms_from a:hover {
+  color: #fa7a37;
+}
+.main .message_list .message_content .ms_text {
+  font-size: 13px;
+}
+.main .message_list .message_content .ms_picture img {
+  width: 110px;
+  height: 110px;
+}
+.main .message_list .message_btn {
+  height: 30px;
+  margin: 0;
+  padding: 0;
+}
+.main .message_list .message_btn li {
+  float: left;
+  width: 149px;
+  height: 29px;
+  border-right: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+}
+.main .message_list .message_btn a {
+  height: 30px;
+  width: 150px;
+  padding: 0 62px;
+  line-height: 30px;
+  font-size: 12px;
+}
+.main .message_list .message_btn a:hover {
+  color: #fa7a37;
+}
+.main .right_area {
+  float: right;
+  width: 240px;
+  margin-right: 16px;
+}
+.main .right_area .user_info .user_info_1 {
+  height: 75px;
+  background: url('../image/uesr_bg_img.jpg') left top no-repeat;
+  position: relative;
+}
+.main .right_area .user_info .user_info_1 img {
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 37.5%;
+  width: 60px;
+  height: 60px;
+}
+.main .right_area .user_info .user_info_2 {
+  height: 68px;
+  padding-top: 22px;
+  background-color: #fff;
+  text-align: center;
+}
+.main .right_area .user_info .user_info_2 .user_name a {
+  font-size: 12px;
+  font-weight: bold;
+}
+.main .right_area .user_info .user_info_2 .user_name a:hover {
+  color: #fa7a37;
+}
+.main .right_area .user_info .user_info_2 .user_atten li {
+  float: left;
+  width: 79px;
+  border-right: 1px solid #d9d9d9;
+}
+.main .right_area .user_info .user_info_2 .user_atten a {
+  display: block;
+  padding-left: 10px;
+  font-size: 17px;
+  font-weight: bold;
+}
+.main .right_area .user_info .user_info_2 .user_atten a:hover {
+  color: #fa7a37;
+}
+.main .right_area .user_info .user_info_2 .user_atten span {
+  display: block;
+}
+.main .right_area .user_info .user_info_2 .user_atten .atten_number {
+  font-size: 17px;
+}
+.main .right_area .user_info .user_info_2 .user_atten .atten_title {
+  font-size: 12px;
+  color: #6c6e6fcc;
+}

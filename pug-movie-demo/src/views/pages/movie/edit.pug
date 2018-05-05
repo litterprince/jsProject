@@ -1,0 +1,61 @@
+extends ../../layout
+
+block content
+	form(method="post", action=action)
+		input(type="hidden", name="movie[_id]", value=movie._id)
+		.form-group.row
+			label.col-sm-2.col-form-label(for="inputDouban") 豆瓣同步
+			.col-sm-9
+				input#inputDouban.form-control(type="text", value="")
+		.form-group.row
+			label.col-sm-2.col-form-label(for="inputTitle") 电影名字
+			.col-sm-9
+				input#inputTitle.form-control(type="text", name="movie[title]", value=movie.title)
+		.form-group.row
+			label.col-sm-2.col-form-label(for="inputDirector") 导演
+			.col-sm-9
+				input#inputDirector.form-control(type="text", name="movie[director]", value=movie.director)
+		.form-group.row
+			label.col-sm-2.col-form-label(for="inputCountry") 国家
+			.col-sm-9
+				input#inputCountry.form-control(type="text", name="movie[country]", value=movie.country)
+		.form-group.row
+			label.col-sm-2.col-form-label(for="inputLanguage") 语言
+			.col-sm-9
+				- var language = movie.language || '英语'
+				input#inputLanguage.form-control(type="text", name="movie[language]", value=language)
+		.form-group.row
+			label.col-sm-2.col-form-label(for="category") 自定义标签
+			.col-sm-9
+				input#category.form-control(type="text", name="category", value="")
+		.form-group.row
+			label.col-sm-2.col-form-label 标签
+			.col-sm-9.form-check
+				each category,index in categories
+					.form-check-inline
+						input.form-check-input(id="checkbox-"+index, type="checkbox", name="movie[category]["+index+"]", checked=category.checked, value=category._id)
+						label.form-check-label(for="checkbox-"+index) #{category.name}
+		.form-group.row
+			label.col-sm-2.col-form-label(for="inputPoster") 海报地址
+			.col-sm-9
+				input#inputPoster.form-control(type="text", name="movie[poster]", value=movie.poster)
+		.form-group.row
+			label.col-sm-2.col-form-label(for="inputFlash") 片源地址
+			.col-sm-9
+				- var flash = movie.flash || 'http://www.w3school.com.cn/i/movie.ogg'
+				input#inputFlash.form-control(type="text", name="movie[flash]", value=flash)
+		.form-group.row
+			label.col-sm-2.col-form-label(for="inputYear") 上映年份
+			.col-sm-9
+				input#inputYear.form-control(type="text", name="movie[year]", value=movie.year)
+		.form-group.row
+			label.col-sm-2.col-form-label(for="inputSummary") 电影简介
+			.col-sm-9
+				textarea#inputSummary.form-control(type="text", name="movie[summary]") #{movie.summary}
+		.form-group.row
+				button.btn.btn-default.btn-sm(type='button', onclick='javascript:history.back(-1);') 返回
+				span &nbsp;&nbsp;
+				button.btn.btn-info.btn-sm(type="submit") 提交
+		br
+		br
+	script(src='/js/movie/edit.js')

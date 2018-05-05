@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .load-container{
+            background-color: #0000000f;
+            position:absolute;
+            top:0;
+            right:0;
+            bottom: 0;
+            left:0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .load-content{
+            background-color: white;
+            border-radius: 10px;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 10px 10px 5px #888888;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input id="btn" type="button" value="测试" />
+        <div id="container" class="load-container">
+            <div class="load-content">
+                <img src="../static/loading-svg/loading-spinning-bubbles.svg" />
+            </div>
+        </div>
+    </div>
+<script>
+    var btn = document.getElementById('btn');
+    var container = document.getElementById('container');
+    btn.onclick = function () {
+        container.style.display = 'flex';
+    };
+    container.onclick = function () {
+        this.style.display = 'none';
+    }
+</script>
+</body>
+</html>

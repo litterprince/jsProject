@@ -1,0 +1,14 @@
+{
+	"title": "机械战警",
+	"director": "何塞·帕迪利亚",
+	"country": "美国",
+	"language": "英语",
+	"poster": "/image/1.jpg",
+	"flash": "http://www.w3school.com.cn/i/movie.ogg",
+	"year": 2014,
+	"summary": "",
+	"meta": {
+		"createAt": ISODate("2018-03-16"),
+		"updateAt": ISODate("2018-03-16")
+	}
+}

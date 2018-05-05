@@ -1,0 +1,13 @@
+extends ../../layout
+
+block content
+	form(method='post', action=action)
+		input(type='hidden', name='category[_id]', value=category._id)
+		.form-group.row
+			label.col-sm-2.col-form-label(for='inputName') 标签名
+			.col-sm-9
+				input#inputName.form-control(type='text', name='category[name]', value=category.name)
+		.form-group.row
+			button.btn.btn-default.btn-sm(type='button', onclick='javascript:history.back(-1);') 返回
+			span &nbsp;&nbsp;
+			button.btn.btn-info.btn-sm(type='submit') 提交

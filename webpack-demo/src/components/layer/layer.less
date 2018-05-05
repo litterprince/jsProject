@@ -1,0 +1,45 @@
+body{
+    padding:100px;
+}
+
+.tab{
+    width:300px;
+    .tab-nav{
+        height:30px;
+        margin-right:24px;
+        li{
+            float:left;
+            margin-right:5px;
+            background-color:#767676;
+            border-radius:3px 3px 0 0;
+            a{
+                display:block;
+                height:30px;
+                padding:0 20px;
+                color:#fff;
+                line-height: 30px;
+            }
+        }
+        .actived{
+            background-color:#fff;
+            a{
+                color:#777;
+            }
+        }
+    };
+    .content-wrap{
+        background-color:#fff;
+        height:200px;
+        .content-item{
+            position: absolute;
+            display:none;
+            img{
+                width:300px;
+                height:200px;
+            }
+        };
+        .current{
+            display:block;
+        }
+    }
+}

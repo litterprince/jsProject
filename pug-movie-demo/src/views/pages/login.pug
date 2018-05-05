@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+	.col-md-8
+		form.justify-content-center(method='post', action='/user/login')
+			.form-group.row
+				label.col-sm-2.col-form-label(for="userName") 用户名
+				.col-sm-10
+					input#userName.form-control(name='user[userName]', type="text", placeholder="userName")
+			.form-group.row
+				label.col-sm-2.col-form-label(form="password") 密码
+				.col-sm-10
+					input#password.form-control(name='user[password]', type="password", placeholder="password")
+			.form-group.row.justify-content-end
+				button.btn.btn-secondary(type='button', onclick='javascript:history.back(-1);') 返回
+				span &nbsp;&nbsp;
+				button.btn.btn-primary(type='submit') 确定
